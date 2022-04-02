@@ -1,0 +1,182 @@
+------------------------------ caracteristica do python -----------------------------------------
+
+* Case-sensitive    #Maiusculo e Minusculo faz diferenca
+* sequencial        #O codigo e lido sequecialmente
+* Dynamic typed     #AS variaveis aceitam todos os tipos independente do type atual
+* Unicode           #aceita o padrao de caracteres unicode
+* orientada a objeto #aceita os paradigmas OOP(Object Oriented Programing)
+* orientada a script #pode ser usada para automatizar tarefas via script
+* multiparadigma     #aceita varios tipos de paradigmas como: OOP, functional, imperative, interpreted, etc.
+
+- Buit-in Data types
+    - text type:
+        * str(string)
+
+    - numeric type:
+        * int(intergen)
+        * float(float point)
+        * complex
+
+    - sequence type:
+        * list
+        * tuple
+        * range
+
+    - mapping type:
+        * dict
+
+    - set type:
+        * set
+        * frozenset
+
+    - boolean type:
+        * bool
+
+    - binary type:
+        * bytes
+        * bytearray
+        * memoryview
+
+--------------------------- python basic commands ---------------------------------
+
+print()                - mostra na tela o texto ou valor dentro
+print(f"{}")           - permite colocar uma variavel no meio do texto
+print('''''')          - permite usar espacos e quebras de linhas no meio da funcao
+print('{}'.format())   - permite usar um placeholder
+
+#       - para comentarios de uma linha
+''''''  - para comentarios de mais de uma linha
+\n      - para quebras de linha
+
+type()  - mostra o tipo de dado
+index() - mostra o index de uma lista
+
+------------------------- variaveis ---------------------------------
+
+sao nomes simbolicos que guardam um valor
+- definicao de variavel
+    * no python nao existe palavra chave para definir uma variavel
+    * ela e feita de maneira direta, guardando o valor diretamente na variavel
+    * ex.: var_name = var_value
+
+* podem comecar com 'letras' ou '_'
+* nao podem comecar com numeros
+* pode-se usar letras, numeros e acentos
+* nao podem conter espacos
+* nao podem conter palavras reservadas ex.: 'if', 'while', 'def', 'in', 'is'..
+* escolha nomes coerentes
+* camelCase: usar upperCase inves de espaco
+    UpperCamelCase: usar upperCase no inicio. recomendado para nome de classes
+    lowerCamelCase: usar lowerCase no inicio. usado para a maioria das variaveis
+
+* snake_case: usar underscore no lugar do espaco
+* e recomendado escrever o codigo em ingles
+
+--------------------------------- string ----------------------------------
+
+var = 'var_name'
+var = "var_name"
+var = """var_name"""
+var = '''var_name'''
+
+
+'im using' + var  #concatenation
+"i'm using {}".format('a placeholder') #with the method 'format()'
+
+len(var)     #contagem de caracteres
+var.upper()  #convert the string to uppercase
+var.lower()  #convert the sting to lowercase
+
+var.isupper() #verify if the variable is uppercase
+var.islower() #verify if the variable is lowercase
+var.isspace() #verify if the variable is only space
+var.isalpha() #verify if the variable only contains letters
+var.isnumeric() #verify if the variable only contains numbers
+var.isalnum() #verify if the variable contain only numbers and letters
+
+------------------------------ numbers ---------------------------------
+
+33     - int(intergen)
+3.4    - float(float point)
+
+var = 4.5
+var = 33
+var = -3
+var = -3.4
+
+f'{var:.2f}'  #converte um numero para 2 casas decimais
+
+int(var)      #converte o numero para inteiro
+float(var)    #converte o numero para real
+str(var)      #converte o numero para string
+
+----------------------------- boolean ---------------------------------
+
+var = True
+var = False
+
+sao representado por True e False Captalized
+
+--------------------------------- function -----------------------------------------
+
+para definir uma funcao usase 'def'
+
+def funcion_name:
+    pass   #usa-se 'pass' para deixar uma zona livre pra edicao posterior sem interferir com o codigo
+
+usa-se return quando se quer que algo retorne da funcao
+
+-------------------------------------- operadores e ordem de precedencia -------------------
+
+aritimeticos = +, -, *, /, %, **     | () -> ** -> * -> / -> // -> % -> + -> -
+atribuicao =   =, +=, -=...          |
+relacionais = >, <, >=, <=, ==...    |
+logicos = not, or, and               |
+
+--------------------- aritmeticos -----------------
+
+> +  = soma
+> -  = subtracao
+> *  = multiplicacao 
+> /  = divisao
+> // = divisao inteira
+> %  = modulo  da divisao ou resto
+> ** = exponenciacao ou potencia
+
+----------------- atribuicao ---------------------
+
+> var = 5       - atribuicao simples
+> var = var + 1 - auto-atribuicao 
+> var += 1      - auto-atribuicao simplificada
+
+---------------- relacionais --------------------
+
+>      - maior que
+<      - menor que
+>=     - maior ou igual a
+<=     - menor ou igual a
+==     - igual a 
+!=     - diferente de
+
+---------------- logicos ------------------------
+
+not    - negacao(contrario, negativo, nao)
+or     - conjuncao(ou, este ou o outro, True or False)
+and    - disjuncao(e, este e o outro, True and True)
+
+---------------------------------- condicionais ----------------------------------
+if condition-True:       |   elif condition-True:       | else:
+
+----- tipos de condicoes ------
+
+simple condition     compound condition     nested condition          minimal statement
+
+if condition:        if condition:              if condition:         if B else C
+    statement           statement                   statement
+                     else:                      else:
+                        statement                   if condition:
+                                                        statement
+                                                    elif condition:
+                                                        statement
+                                                    else:
+                                                        statement

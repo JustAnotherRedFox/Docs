@@ -1,0 +1,43 @@
+                           - comandos do terminal linux -
+
+- pwd = mostra em que diretorio você está
+- ls =lista os arquivos no diretorio atual
+	/-l = para monstrar mais detalhes 
+	/-h = para humanizar os detalhes
+	/-a = para mostrar arquivos ocultos
+- cd = move entre os diretorios
+- cd .. = move para o diretorio anterior
+- mkdir = cria um diretorio/pasta
+- rmdir = remove um diretorio/pasta e todos diretorios nele
+- rm = remove um arquivo
+- rm -rf = força a remoçao de um arquivo ou diretorio/pasta 
+- cp = copia um arquivo ou diretorio
+- cp -r = copia um arquivo/diretorio e todo seu conteúdo
+- mv = move um arquivo ou diretorio
+- find = mostra o caminho do diretorio especificado
+- touch nome.txt = cria um arquivo chamado 'nome' com extensão .txt 
+- apt install = instalador de aplicativo do linux baseado em debian
+- apt remove = desistala um aplicativo
+- apt update = atualiza o repositorio
+- apt upgrade = atualiza as aplicaçoes ja instaladas
+- 7z x <arquivo> = extrai arquivo
+- ctrl + c = cancela um comando
+- tmux = abre o terminal tmux
+- ctrl + b + % = divide o terminal em dois
+- ctrl + l ou clear = limpa o terminal
+---------------------------------------------------------------------------------------------------
+                                 - atalhos teclado -
+ctrl + alt + ⇅ = muda o espaço de trabalho
+windows + ⇄  ou ⇅ = muda o dimensionamento das janelas de aplicativos
+ctrl + alt + t = abre o terminal
+windows + e = abre o explorador de arquivos
+f10 = cria uma nova pasta
+f2 = renomeia o arquivo selecionado
+alt + tab = muda entre janelas
+ctrl + s = salva
+
+
+
+---------------------------------------------------------------------------------------------------
+                                       - vim - 
+- :Minimap – abre o minimap
