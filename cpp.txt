@@ -1,3 +1,319 @@
-		---- C++ or CPP programing language ----
+		---- caracteristicas do C++(C Plus Plus) ----
 
+	<case sensitive>
+		* diferencia entre uppercase e lowercase
+		
+	<linguagem compilada>
+		* usa um compilador
+		
+	<multi-paradigma>
+		* possui suporte a linguagem imperativa(ou procedural), oop(object oriented Programming) e generica
 
+	<general purpuse>
+		* pode ser usado para multiplos propositos
+	
+	<estaticamente tipada>
+		* seus data-type nao podem ser mudados e devem ser declarados no inicio do arquivo
+		
+	
+	[exemplo de arquivo c++]
+		#include <iostream>
+		int main() {
+		std::cout << "hello world" << std::endl;
+		return 0;
+		}
+		
+	[comentarios]
+		> no c++ usa-se '//' e '/**/' para comentarios
+			> '//' usado para comentar uma unica linha
+			> '/**/' usado para comentar multiplas linhas
+		
+	[fundamental data types]
+		> int 
+			> integer, numeros inteiros, 2 ou 4 Bytes
+			> pode conter dados de -2147483648 ate 2147483647
+			> int salary = 57000;
+			
+		> float
+			> floating point, numeros reais, 4 Bytes
+			> pode conter dados decimais e exponenciais
+			> float area = 64.74;
+			
+		> double
+			> double float point, numeros com ponto(numeros reais), 8 Bytes
+			> contem duas vezes a precissao de float
+			> double volume = 134.54342;
+			
+		> char 
+			> character, letras unicas(a, b, c, etc), 1 Byte
+			> contem characters, usa-se entre single quotes(')
+			> char gpa = 'F';
+			
+		> string
+			> strings, palavras ou frases completas, 
+			> contem uma sequencia de caracteres(testo)
+			> nao built-in
+			> usa-se entre double quotes(")
+			> string name = "jhon santos";
+			
+		> bool
+			> boolean, true ou false, 1 byte
+			> contem os valores true e false
+			> bool condition = false;
+
+		> void
+			> empty, 0 Byte
+			
+	[type modifiers]
+		> pode-se modificar os types fundamentais(int, double e char) usando 4 modifiers(signed, unsigned, short e long)
+		> int
+			> signed int
+				> 4 Bytes
+				> mesmo que int
+				
+			> unsigned int
+				> 4 Bytes
+				> apenas numeros positivos
+				
+			> short 
+				> 2 Bytes
+				> usado para integers pequenos(de -32768 a 32767)
+				
+			> unsigned short
+				> 2 Bytes
+				> usado para integers pequenos e possitivos(de 0 a 65535)
+				
+			> long 
+				> ate 4 Bytes
+				> usado para integers largos(mesmo que long int)
+				
+			> unsigned long
+				> 4 Bytes
+				> usado para integers largos e possitivos ou 0(mesmo que unsigned long int)
+				
+			> long long
+				> 8 Bytes
+				> usado para integers muito largos(mesmo que long long int)
+				
+			> unsigned long long 
+				> 8 Bytes 
+				> usado para integers muito largos e positivos ou 0(equivalente a unsigned long long int)
+				
+		> double
+			> long double
+				> 12 Bytes
+				> usado para largos floating-point numeros
+		> char
+			> signed char
+				> 1 Byte
+				> usado para characters (de -127 a 127)
+				
+			> unsigned char
+				> 1 Byte 
+				> usado para characters(de 0 para 255)
+				
+	[Variables]
+		> para definir uma variavel define-se primeiro o data type e entao o nome
+			> int age;
+			
+		> pode-se tambe alocar um valor da definicao diretamente
+			> int age = 19;
+			
+		> regras para nomiar uma variavel:
+			> unicamente alphabetos, numeros e underscore(_)
+			> nao pode iniciar com um numero
+			> e preferivel iniciar a variavel com lowercase
+			> nao pode ser uma 'keyword', como: int, class, for, etc...
+			> pode-se inciar com underscore mas nao e aconselhado
+			> aconselhado usar nomes coerentes, exemplo: first_name
+			> nao pode conter espacos(' ')
+			> camelCase
+				> uppercase para separar palavras
+			> snake_case
+				> underscore para separa palavras
+				
+		> literals
+			> integers
+				> decimal (base 10)
+					> 0, -9, 22, etc...
+					
+				> octal (base 8)
+					> 021, 077, 033, etc...
+					> sempre inicia com '0'
+					
+				> hexadecimal (base 16)
+					> 0x7f, 0x2a, 0x521, etc...
+					> sempre inicia com '0x'
+					
+			> floating point
+				> fractional
+					> -2.0
+					> 0.0000231
+					
+				> exponent
+					> -0.22E-5
+						> E-5 equivale a 10^-5
+						
+			> escape sequences
+				> usado quando e nescessario usar characters que nao podem ser typed ou possui um uso especial em c++
+				> usa-se backslash(\) para ignorar o proximo character
+				> \b
+					> backspace
+				> \f
+					> form feed
+				> \n 
+					> newline
+				> \r 
+					> return
+				> \t 
+					> horizontal tab
+				> \v 
+					> vertical tab
+				> \\
+					> backslash
+				> \'
+					> single quotation mark
+				> \"
+					> double quotation mark
+				> \?
+					> question mark
+				> \0
+					> null character
+				
+			> string
+				> string literal sao sequencias de characters dentro de double quotation mark
+				> "good"
+					> uma string normal
+					
+				> ""
+					> uma string vazia(null)
+					
+				> "    "
+					> uma string com espacos dentro
+					
+				> "x"
+					> uma string com um unico caracter dentro
+				
+				> "hello\n"
+					> uma string com um newline
+					
+			> contants
+				> constant sao variaveis cujo valor nao pode ser mudados
+				> const int pi = 3.1415
+				> o valor nao pode ser mudado portanto se for tentado
+					> pi = 32; //ira dar erro pois pi e uma contant
+				
+	[output e input]
+		> no c++ usa-se 'std::cout <<' para dar output em um dado
+			> ex.: 
+				> std::cout << "hello" << std::endl;
+					> ira mostrar na tela: hello
+					> 'std' significa 'stardard', e a biblioteca padrao onde reside o 'cout'
+					> pode-se tambe adicionar 'using std::cout' ao header para eliminar o 'std::' do codigo
+					> 'std::endl' tem o mesmo papel de '\n' ou seja inserir uma newline
+					> toda linha em c++ termina com ';' para demostrar que a linha termina ali
+					
+		> usa-se 'std::cin >> ' para dar input em um dado do usuario
+			> ex.:
+				> int age;
+				> std::cin >> age;
+					> ira enviar o input do usuario para a variavel age
+					
+			> o 'std::cin' apenas guarda palavras(antes de um espaco) para guardar frases completas(com espacos) precisamos usar uma funcao como: getline()
+				> string name;
+				> getline(cin, name)
+					> ira guardar toda a string dentro da variavel 'name'
+					
+	[operators]
+		> arithmetic operators
+			> '+' addition
+			> '-' subtraction
+			> '*' multiplication
+			> '/' division
+			> '%' modulo(resto da divisao)
+			
+		> increment e decrement operators
+			> '++' increase by 1
+				num = 1;
+				num++ == 2;
+				> mesmo que num = num + 1;
+			> '--' decrease by 1
+				num = 1;
+				num-- == 0;
+				> mesmo que num = num - 1;
+				
+		> assignment operators
+			> '=' assign, ex.: a = b;
+			> '+=', equal to a = a + b;
+			> '-=', equal to a = a - b;
+			> '*=', equal to a = a * b;
+			> '/=', equal to a = a / b;
+			> '%=', equal to a = a % b;
+			
+		> relational operators
+			> '==' is equal to
+			> '!=' not equal to
+			> '>' greater than
+			> '<' less than
+			> '>=' greater or equal to
+			> '<=' less or equal to
+			
+		> logical operators
+			> '&&', logical 'AND'
+				> operand1 && operand2
+				> true if all operand are true
+				
+			> '||', logical 'OR'
+				> operand1 || operand2
+				> true if at least one of the operand are true
+				
+			> '!', logical 'NOT'
+				> !operand
+				> true only if the operand are false
+				
+		> Bitwise operators
+			> usado para fazer operacoes com bits individuais, apenas pode ser usado com data type do tipo 'char' e 'int'
+			> '&' binary 'AND'
+			> '|' binary 'OR'
+			> '^' binary 'XOR'
+			> '~' binary One's Complement
+			> '<<' binary shift left
+			> '>>' binary shift right
+			
+		> Others operators
+			> 'sizeof'
+				> retorna o tamanho em bytes de um data type
+				> sizeof(int); 
+					> 4
+				
+			> '?:'
+				> retorna o valor baseado na condicao
+				> string result = (5 > 0) ? "yes" : "nop"; 
+					> "yes"
+					
+			> '&'
+				> representa o memory address de um operando
+				> &num;
+					> memory address de num
+			
+			> '.'
+				> acessa membros strutura variavel ou class ou objects
+				> s1.marks = 92;
+					> acessa o atributo 'marks' dentro do objeto 's1' e altera o valor para '92'
+					
+			> '->'
+				> usado com pointers para acessar variaveis da class
+				> ptr -> marks = 92;
+					> mesmo que ptr.mark = 92; 
+						> utilizado quando '.' nao pode ser usado
+				
+			> '<<'
+				> print o valor de output
+				> cout << 5;
+					> 5
+					
+			> '>>'
+				> pega o valor de input do usuario
+				> cin >> num;
+				
+			

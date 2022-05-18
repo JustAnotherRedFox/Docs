@@ -7,6 +7,7 @@
 * orientada a objeto #aceita os paradigmas OOP(Object Oriented Programing)
 * orientada a script #pode ser usada para automatizar tarefas via script
 * multiparadigma     #aceita varios tipos de paradigmas como: OOP, functional, imperative, interpreted, etc.
+* interpretada       # usa um interpretador
 
 - Buit-in Data types
     - text type:
