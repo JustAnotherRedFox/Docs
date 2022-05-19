@@ -1,0 +1,20 @@
+			< apps usados >
+			
+<GPU-Z> 
+<CPU-Z>
+<Visual Studio>
+<Visual Studio Code>
+<Epic Games Laucher>
+	<Unreal Engine>
+<Steam>
+	<Blender>
+<Virtual Box>
+<Notepad++>
+<Utorrent>
+<Winrar>
+<7-Zip>
+<Git>
+<MSI Afterburner>
+<Advanced System Care>
+<Driver Booster>
+<Word>

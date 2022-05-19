@@ -1,5 +1,5 @@
 ----------------------- terminal ---------------------
-command (-parametro) {argumento}
+command (-parameter) {argument}
 
 wildcards:
   > * = substitue um ou mais caracteres, ex.: rm ./*.jpg = remove do diretorio atual todos os .jpg
@@ -21,6 +21,10 @@ alterar terminal:
 
 para verificar imformacoes de um aplicativo:
   > xprop
+  
+para verificar informacoes de execucao e uso do sistema
+	> htop
+	> ps
 
 para aplicar as alteracoes dentro do arquivo .Xresources:
   > xrdb ~/.Xresources
