@@ -685,3 +685,159 @@
 				return 0;
 			}
 			
+[structures]
+	> similar to classes is used to organaze all data of a sama type in only one place work as blueprint
+	> data inside a struct is called atribute
+	
+	> declaration
+		> struct structName {
+			//atributes
+			
+		};
+		
+	> access
+		> structName.atributeName;
+		> structName.atributeName = "john";
+		
+	> ex.:
+		> struct Person {
+			char name[50];
+			int age;
+			double salary;
+			
+		};
+		
+		> int main(){
+			Person p1;
+			
+			p1.name = "john santos";
+			p1.age = 19;
+			p1.salary = 1021.99;
+			
+			std::cout << "name: " << p1.name << std::endl;
+			std::cout << "age: " << p1.age << std::endl;
+			std:: << "salary: " << p1.salary << std::endl;
+			
+			return 0;
+		}
+		
+	> Function and structures
+		> struct Person {
+			char name[50];
+			int age;
+			
+		};
+		
+		> void displayData(Person); //function declaration
+		
+		> int main() {
+			Person bill;
+			
+			bill.name = "Bill Chinton";
+			bill.age = 55;
+			
+			displayData(bill);
+			
+			return 0;
+		}
+		
+		> void displayData(Person bill) {
+			std::cout << "\nDisplaying Information." << std::endl;
+			std::cout << "Name: " << bill.name << std::endl;
+			std::cout << "age: " << bill.age << std::endl;
+			
+		}
+		
+[object and class]
+	> a class is a blueprint for the object
+	
+	> definition
+		> class className {
+			//Data
+			//Functions
+		};
+		
+	> ex.:
+		> class Room {
+			public:
+				double length;
+				double breadth;
+				double height;
+				
+				double calculeArea(){
+					return length * breadth;
+					
+				}
+				
+				double calculeVolume() {
+					return length * breadth * height;
+					
+				}
+		};
+		
+	> when a class is defined, only the specification for the object is defined, no memory or storage is allocated.
+	> is a blueprint, to use the data and access the functions, a object has to be created.
+	
+	> syntax to define a object
+		> className ObjectVariableName;
+		
+	> ex.:
+		> Room kicken, restRoom;
+		
+	> to access and manipulate the data and function utilize '.'(dot)
+		> className.functionName();
+		> className.dataName;
+		> className.DataName = 20;
+		
+	> ex.:
+		> restRoom.length = 5.5;
+		> kicken.calculeArea();
+		
+	> Constructors
+	> are a special type of function that is automaticlly called when an object is created
+	> class Wall {
+		public:
+			//create a constructor
+			Wall() {
+				//code
+			}
+	
+	};
+	
+	> ex.:
+		> class Wall {
+			private:
+				double length;
+				
+			public:
+				Wall() {
+					length = 6.6;
+					std::cout << "creating a wall." << std::endl;
+					std::cout << "Length: " << length << std::endl;
+					
+				}
+		};
+		
+[Pointers]
+	> pointers are variables that stores memory address of other variables
+	> is used '&' to do that
+	> ex.:
+		> int var = 3;
+		> std::cout << &var;
+			> this will show the memory address of 'var', using hexadecimal values like: 0x7fff5f
+			
+	> to declare a pointers uses '*':
+		> int *pointerVariable; //can be declared like this
+		> int* pointerVariable; //this is the preferred syntax
+		> int* pointerVariable, p;  //declaring a pointer 'pointerVariable' and a normal int variable 'p'
+		
+	> to assing address to pointers variables
+		> int* pointVar, var;
+		> var = 5
+		> pointVar = &var;
+		
+	> to access the pointer
+		> std::cout << pointVar; //this wil show the memory address of var;
+		> std::cout << *pointVar; //this will show the value stored in var(5)
+		
+	
