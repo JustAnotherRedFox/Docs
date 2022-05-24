@@ -1,13 +1,16 @@
 			< apps usados >
 			
 <GPU-Z> 
+	<gpu info>
 <CPU-Z>
+	<cpu info>
 <Visual Studio>
 <Visual Studio Code>
 <Epic Games Laucher>
 	<Unreal Engine>
 <Steam>
 	<Blender>
+<unity>
 <Virtual Box>
 <Notepad++>
 <Utorrent>
@@ -18,3 +21,6 @@
 <Advanced System Care>
 <Driver Booster>
 <Word>
+<calibre>
+	<ebook reader and pdf converter>
+

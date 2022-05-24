@@ -840,4 +840,64 @@
 		> std::cout << pointVar; //this wil show the memory address of var;
 		> std::cout << *pointVar; //this will show the value stored in var(5)
 		
-	
+	> to add address of an array
+		> int *ptr;
+		> int array[5];
+		
+		> ptr = &array[0]; //this will save the first cell of an array
+		> ptr = array; //will save only the first cell of an array
+		
+	> using pointer and address in functions
+		> with address
+		> passing the address as parameter, exclude the necessite for return a value
+			> void swap(int &n1, int &n2) {
+				int temp;
+				temp = n1;
+				n1 = n2;
+				n2 = temp;
+			}
+			
+			> swap(a, b); //calling the fuction
+			
+		> with pointer
+			> void swap(int* n1, int* n2) {
+				int temp;
+				temp = *n1;
+				*n1 = *n2;
+				*n2 = temp;
+			}
+			
+			> swap(&a, &b); //calling the function
+			
+[Memory management]
+	> in c++ is possible to allocate and unalocate memory using the operators 'new' and 'delete'
+	> the sytax is: pointerVariable = new dataType
+		> int* pointVar;
+		> pointVar = new int;
+		> *pointVar = 45;
+			> dynamically allocating memory for an int variable, is necessary to use a pointer to allocate memory dynamically
+			> the new operator returns the address of the memory location
+			
+	> to return the memory to OS is used the delete operator, that is known as memory deallocation
+		> the sytax is : delete pointerVariable;
+		> delete pointVar;
+		
+[inheritance]
+	> it allow the creation of a new class(derived class) from an existing class(base class or super class)
+	ex.:
+		> class Animal {
+			eat() function
+			sleep() function
+			
+		};
+		
+		> class Dog :: public Animal {
+			bark() function
+			
+		};
+		
+		> Dog rufus;
+		> rufus.sleep()
+			> the inheritance allow us to use a function from the base class in the derived class
+			> in the exemplo the 'dog' class can use the sleep() function from the base class
+			
