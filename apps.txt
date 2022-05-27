@@ -2,14 +2,18 @@
 			
 <GPU-Z> 
 	<gpu info>
+	
 <CPU-Z>
 	<cpu info>
+	
 <Visual Studio>
 <Visual Studio Code>
 <Epic Games Laucher>
 	<Unreal Engine>
+	
 <Steam>
 	<Blender>
+	
 <unity>
 <Virtual Box>
 <Notepad++>
@@ -23,4 +27,7 @@
 <Word>
 <calibre>
 	<ebook reader and pdf converter>
+	
+<gimp>
+	<Image editor>
 

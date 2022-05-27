@@ -25,160 +25,160 @@
 		
 [comentarios]
 		> no c++ usa-se '//' e '/**/' para comentarios
-			> '//' usado para comentar uma unica linha
-			> '/**/' usado para comentar multiplas linhas
+			* '//' usado para comentar uma unica linha
+			* '/**/' usado para comentar multiplas linhas
 		
 [fundamental data types]
 	> int 
-		> integer, numeros inteiros, 2 ou 4 Bytes
-		> pode conter dados de -2147483648 ate 2147483647
-		> int salary = 57000;
+		* integer, numeros inteiros, 2 ou 4 Bytes
+		* pode conter dados de -2147483648 ate 2147483647
+		* int salary = 57000;
 		
 	> float
-		> floating point, numeros reais, 4 Bytes
-		> pode conter dados decimais e exponenciais
-		> float area = 64.74;
+		* floating point, numeros reais, 4 Bytes
+		* pode conter dados decimais e exponenciais
+		* float area = 64.74;
 		
 	> double
-		> double float point, numeros com ponto(numeros reais), 8 Bytes
-		> contem duas vezes a precissao de float
-		> double volume = 134.54342;
+		* double float point, numeros com ponto(numeros reais), 8 Bytes
+		* contem duas vezes a precissao de float
+		* double volume = 134.54342;
 		
 	> char 
-		> character, letras unicas(a, b, c, etc), 1 Byte
-		> contem characters, usa-se entre single quotes(')
-		> char gpa = 'F';
+		* character, letras unicas(a, b, c, etc), 1 Byte
+		* contem characters, usa-se entre single quotes(')
+		* char gpa = 'F';
 		
 	> string
-		> strings, palavras ou frases completas, 
-		> contem uma sequencia de caracteres(testo)
-		> nao built-in
-		> usa-se entre double quotes(")
-		> string name = "jhon santos";
+		* strings, palavras ou frases completas, 
+		* contem uma sequencia de caracteres(testo)
+		* nao built-in
+		* usa-se entre double quotes(")
+		* string name = "jhon santos";
 		
 	> bool
-		> boolean, true ou false, 1 byte
-		> contem os valores true e false
-		> bool condition = false;
+		* boolean, true ou false, 1 byte
+		* contem os valores true e false
+		* bool condition = false;
 
 	> void
-		> empty, 0 Byte
+		* empty, 0 Byte
 			
 [type modifiers]
 	> pode-se modificar os types fundamentais(int, double e char) usando 4 modifiers(signed, unsigned, short e long)
 	> int
 		> signed int
-			> 4 Bytes
-			> mesmo que int
+			* 4 Bytes
+			* mesmo que int
 			
 		> unsigned int
-			> 4 Bytes
-			> apenas numeros positivos
+			* 4 Bytes
+			* apenas numeros positivos
 			
 		> short 
-			> 2 Bytes
-			> usado para integers pequenos(de -32768 a 32767)
+			* 2 Bytes
+			* usado para integers pequenos(de -32768 a 32767)
 			
 		> unsigned short
-			> 2 Bytes
-			> usado para integers pequenos e possitivos(de 0 a 65535)
+			* 2 Bytes
+			* usado para integers pequenos e possitivos(de 0 a 65535)
 			
 		> long 
-			> ate 4 Bytes
-			> usado para integers largos(mesmo que long int)
+			* ate 4 Bytes
+			* usado para integers largos(mesmo que long int)
 			
 		> unsigned long
-			> 4 Bytes
-			> usado para integers largos e possitivos ou 0(mesmo que unsigned long int)
+			* 4 Bytes
+			* usado para integers largos e possitivos ou 0(mesmo que unsigned long int)
 			
 		> long long
-			> 8 Bytes
-			> usado para integers muito largos(mesmo que long long int)
+			* 8 Bytes
+			* usado para integers muito largos(mesmo que long long int)
 			
 		> unsigned long long 
-			> 8 Bytes 
-			> usado para integers muito largos e positivos ou 0(equivalente a unsigned long long int)
+			* 8 Bytes 
+			* usado para integers muito largos e positivos ou 0(equivalente a unsigned long long int)
 			
 	> double
 		> long double
-			> 12 Bytes
-			> usado para largos floating-point numeros
+			* 12 Bytes
+			* usado para largos floating-point numeros
 	> char
 		> signed char
-			> 1 Byte
-			> usado para characters (de -127 a 127)
+			* 1 Byte
+			* usado para characters (de -127 a 127)
 			
 		> unsigned char
-			> 1 Byte 
-			> usado para characters(de 0 para 255)
+			* 1 Byte 
+			* usado para characters(de 0 para 255)
 				
 [Variables]
 	> para definir uma variavel define-se primeiro o data type e entao o nome
-		> int age;
+		* int age;
 		
 	> pode-se tambe alocar um valor da definicao diretamente
-		> int age = 19;
+		* int age = 19;
 		
 	> regras para nomiar uma variavel:
-		> unicamente alphabetos, numeros e underscore(_)
-		> nao pode iniciar com um numero
-		> e preferivel iniciar a variavel com lowercase
-		> nao pode ser uma 'keyword', como: int, class, for, etc...
-		> pode-se inciar com underscore mas nao e aconselhado
-		> aconselhado usar nomes coerentes, exemplo: first_name
-		> nao pode conter espacos(' ')
-		> camelCase
-			> uppercase para separar palavras
-		> snake_case
-			> underscore para separa palavras
+		* unicamente alphabetos, numeros e underscore(_)
+		* nao pode iniciar com um numero
+		* e preferivel iniciar a variavel com lowercase
+		* nao pode ser uma 'keyword', como: int, class, for, etc...
+		* pode-se inciar com underscore mas nao e aconselhado
+		* aconselhado usar nomes coerentes, exemplo: first_name
+		* nao pode conter espacos(' ')
+		* camelCase
+			# uppercase para separar palavras
+		* snake_case
+			# underscore para separa palavras
 			
 	> literals
 		> integers
-			> decimal (base 10)
-				> 0, -9, 22, etc...
+			* decimal (base 10)
+				# 0, -9, 22, etc...
 				
-			> octal (base 8)
-				> 021, 077, 033, etc...
-				> sempre inicia com '0'
+			* octal (base 8)
+				# 021, 077, 033, etc...
+				# sempre inicia com '0'
 				
-			> hexadecimal (base 16)
-				> 0x7f, 0x2a, 0x521, etc...
-				> sempre inicia com '0x'
+			* hexadecimal (base 16)
+				# 0x7f, 0x2a, 0x521, etc...
+				# sempre inicia com '0x'
 				
 		> floating point
-			> fractional
-				> -2.0
-				> 0.0000231
+			* fractional
+				# -2.0
+				# 0.0000231
 				
-			> exponent
-				> -0.22E-5
+			* exponent
+				# -0.22E-5
 					> E-5 equivale a 10^-5
 					
 		> escape sequences
-			> usado quando e nescessario usar characters que nao podem ser typed ou possui um uso especial em c++
-			> usa-se backslash(\) para ignorar o proximo character
-			> \b
-				> backspace
-			> \f
-				> form feed
-			> \n 
-				> newline
-			> \r 
-				> return
-			> \t 
-				> horizontal tab
-			> \v 
-				> vertical tab
-			> \\
-				> backslash
-			> \'
-				> single quotation mark
-			> \"
-				> double quotation mark
-			> \?
-				> question mark
-			> \0
-				> null character
+			* usado quando e nescessario usar characters que nao podem ser typed ou possui um uso especial em c++
+			* usa-se backslash(\) para ignorar o proximo character
+			* \b
+				# backspace
+			* \f
+				# form feed
+			* \n 
+				# newline
+			* \r 
+				# return
+			* \t 
+				# horizontal tab
+			* \v 
+				# vertical tab
+			* \\
+				# backslash
+			* \'
+				# single quotation mark
+			* \"
+				# double quotation mark
+			* \?
+				# question mark
+			* \0
+				# null character
 			
 		> string
 			> string literal sao sequencias de characters dentro de double quotation mark
@@ -899,5 +899,153 @@
 		> Dog rufus;
 		> rufus.sleep()
 			> the inheritance allow us to use a function from the base class in the derived class
-			> in the exemplo the 'dog' class can use the sleep() function from the base class
+			> in the example the 'dog' class can use the sleep() function from the base class
 			
+	> inheritance is an 'is-a relationship', is used only when an 'is-a relationship' is present
+	> ex.:
+		> a car is a vehicle
+		> orange is a fruit
+		> a surgeon is a doctor
+		> a dog is an animal
+		
+	> protected members of a class can be accessed by an derived class unlike a private member
+		> class Animal {
+			protected:
+				std::string type;
+				
+		};
+		
+		> class Dog : public Animal {
+			public:
+				void setType(std::string tp) {
+					type = tp;
+					
+				}
+				void displayType() {
+					std::cout << "i am a " << type << std::endl;
+				}
+		};	
+		
+		int main() {
+			Dog brutus;
+			brutus.setType("german shepherd");
+			brutus.displayType();
+		
+			return 0;
+		}
+		
+	> access modes
+	> is possible to derive class in various ways:
+		> class Dog : public Animal {};
+			> the derived class will inherite the members of the base class as they are if they are defined as 'public:'
+			
+		> class Dog : private Animal {};
+			> all members of the base class will become 'private:' in the derived class
+			
+		> class Dog: protected Animal {};
+			> the 'public:' members of the base class will become 'protected:' in the derived class
+			
+	> multlevel inheritance
+	> is when a class is derived from an derived class
+	> ex.:
+		> class A {};
+		> class B : public A {};
+		> class C : public B {};
+		
+	> multiple inheritance
+	> is when a class is derived from more than one base class
+		> class Mammal {};
+		> class WingedAnimal {};
+		> class Bat : public Mammal, public WingedAnimal {};
+		
+	> ambiguity in multiple inheritance
+	> occurs when a function is derived from both base class with the same name
+	> ex.:
+		> class Base1 {
+			public:
+				void someFunction() {}
+		};
+		
+		> class Base2 {
+			public:
+				void someFunction() {}
+		};
+	
+		> class Derived : public Base1, public base2 {};
+		
+		> int main() {
+			Derived object;
+			object.someFunction();
+				> wil occur a erro in compilation because the compiler don't know wich function is supose to be called
+				> an way to fix it is:
+					> object.Base1::someFunction();
+					> object.Base2::someFunction();
+		}
+	
+	> hierarchical inheritance
+	> occurs when more than one class is derived from the same base class
+	> ex.:
+		> class Animal {};
+		> class Horse : public Animal {};
+		> class Bat : public Animal {};
+		> class Dog : public Animal {};
+		> class Cat : public Animal {};
+		
+	> friend fuction
+	> is an function that can access the private and protected member of a class
+	> ex.:
+		> class Distance {
+			private:
+				int meter;
+				
+				friend int addFive(Distance);
+			public:
+				Distance() : meter(0) {}
+		};
+		
+		int addFive(Distance dist) {
+			dist.meter += 5;
+			return dist.meter;
+		}
+		
+		int main() {
+			Distance D;
+			std::cout << "distance: " << addFive(D);
+			return 0;
+		}
+		
+	> friend class
+	> a friend class can use all member of a base class 
+	> ex.:
+		> class ClassB;
+		> class ClassA {
+			friend class ClassB;
+		};
+		> class ClassB {};
+		
+[Virtual Function]
+	> is an function created in the base class to be oberridden in the derived class
+	> ex.:
+		> class Base {
+			public:
+				virtual void print() {
+					//code
+				}
+		};
+		> class Derived : public Base {
+			public:
+				void print() {
+					//code
+				}
+		};
+		
+		> int main() {
+			Derived derived1;
+		
+			//pointer of Base type that point to derived1
+			Base* base1 = &derived1;
+			
+			//call member function of derived class
+			base1->print();
+			
+		}
