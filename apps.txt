@@ -30,4 +30,10 @@
 	
 <gimp>
 	<Image editor>
+	
+<OGRE>
+	<same engine that kenshi uses>
+<Brave Browser>
+<XnViewMP>
+	<to open DDS files>
 
