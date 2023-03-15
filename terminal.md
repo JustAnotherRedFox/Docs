@@ -95,7 +95,7 @@ manipulacao basica do sistema:
   > rm
 	* remove arquivos
 	* -r = remove recurcivamente, -f = remove forcado
-	* rm -rf = pode ser usado para remover diretorios com arquivos dentro
+	* -rf = pode ser usado para remover diretorios com arquivos dentro
 	* Stand for ReMove
   > mv
 	* move arquivos e pastas
