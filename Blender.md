@@ -36,3 +36,5 @@
 * Merge Menu (M)
 	* At Center
 	* At Cursor
+* Focus Object (Sculpt Mode)
+	* Transfer Sculpt Mode (Alt + Q) 

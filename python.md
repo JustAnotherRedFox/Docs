@@ -44,6 +44,12 @@ print()                - mostra na tela o texto ou valor dentro
 print(f"{}")           - permite colocar uma variavel no meio do texto
 print('''''')          - permite usar espacos e quebras de linhas no meio da funcao
 print('{}'.format())   - permite usar um placeholder
+print('phase', end='') - stop the default newline
+
+input()					- to receive a keyboard input
+input('question: ')     - to print a message and receive a keyboard input
+input().upper()[0]      - to receive a filtered input, .upper() = to upperCase, [0] = only the char of index 0
+int(input())            - to cast a input to one especific data type e.g.: int(input()), str(input()), float(input())
 
 #       - para comentarios de uma linha
 ''''''  - para comentarios de mais de uma linha
@@ -52,7 +58,7 @@ print('{}'.format())   - permite usar um placeholder
 type()  - mostra o tipo de dado
 index() - mostra o index de uma lista
 
-------------------------- variaveis ---------------------------------
+------------------------- Variables ---------------------------------
 
 sao nomes simbolicos que guardam um valor
 - definicao de variavel
@@ -120,7 +126,7 @@ sao representado por True e False Captalized
 
 --------------------------------- function -----------------------------------------
 
-para definir uma funcao usase 'def'
+para definir uma funcao usa-se 'def'
 
 def funcion_name:
     pass   #usa-se 'pass' para deixar uma zona livre pra edicao posterior sem interferir com o codigo
@@ -181,3 +187,72 @@ if condition:        if condition:              if condition:         if B else 
                                                         statement
                                                     else:
                                                         statement
+
+------------------------------------ loops ------------------------------------------
+while True:
+	statement
+		Break
+	
+while codition:
+	statement
+	
+for i in tuple_name:
+	statement
+
+for i, v in enumerate(values):						#will search the index and value
+	print(f'on index{i} was find the value{v}.')
+------------------------------------ Tuples ---------------------------------------
+* Tuplas sao variaveis constantes ou seja imutaveis 
+
+## Basic Manipulation
+lunch = ('rice', 'soda', 'salad', 'meat') #to define a tuple
+or
+lunch = 'rice', 'soda', 'salad', 'meat' #can be defined withou parentesis
+
+del(lunch)   #delete the tuple from memory, work for any variable
+
+## Reading
+print(lunch)			#will print the whole tuple
+lunch[1]         #the element of index 1
+lunch[-1]    #the last element
+lunch[1:3   #from the element 1 to element 3 except for element 3 
+lunch[:2]     #from first element to element 2 except for element 2 
+lunch[2:]    #from element 2 to last element
+sorted(lunch)      #tuple will be sorted in alphabetic order
+lunch.index("soda") #will show the index of "soda"
+
+---------------------------------- Lists -------------------------------------
+* Listas sao variaveis compostas similaris a tuplas, porem mutaveis
+
+## Basic Manipulation
+lunch = ['rice', 'soda', 'salad', 'meat'] 	#to define a list with the especified values
+numbers = list(range(4, 11)) 				#define a list using the method 'list' with the values from 4 to 10(using method range)
+
+lunch[2] = 'juice'			#change the value of specified index
+lunch.append('cookie')   #append the item to the end of the list, a.k.a adding a new item
+lunch.insert(0, 'bread') #insert the item in the specified index, deslocating all others item to the right
+
+del lunch[3]			#remove a item by index using the command del
+lunch.pop()				#remove the last item
+lunch.pop(3)			#remove a item by index using the method pop()
+lunch.remove('meat')    #remove the first occurrence of a item by value
+
+numbers.sort()			#will sort the values in ascending order
+numbers.sort(reverse=True)	#will sort the values in descending order
+len(numbers)				#get the lenght(number of items) of the list
+
+## Link and Duplicates
+a = [1, 3, 4, 7]
+b = a				# B is being linked to A, acting as reference, so the changes in B will affect A
+c = a[:]			# C is inheriting all values in A, so C is just a copie of A
+	
+------------------------------ Libraries -------------------------------------
+* import libName   						# import the full library
+* from libName import funcName			# import only a function from a library
+
+# Random Lib
+* Import Random       
+
+random.choice(seq)   					#Return a random element from the non-empty sequence seq.
+random.randint(a, b) 					#Return a random integer N such that a <= N <= b.
+random.seed(a=None, version=2)			#Initialize the pseudo-random number generator.
