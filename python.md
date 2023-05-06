@@ -201,6 +201,21 @@ for i in tuple_name:
 
 for i, v in enumerate(values):						#will search the index and value
 	print(f'on index{i} was find the value{v}.')
+	
+# greater than and less than
+numbers = [10, 2, 3, 7, 9, 1]
+greater = 0
+lesser = 0
+
+for c in numbers:
+	if c == 0:
+		greater = lesser = c
+	else:
+		if c > greater:
+			greater = c
+			
+		if c < lesser:
+			lesser = c
 ------------------------------------ Tuples ---------------------------------------
 * Tuplas sao variaveis constantes ou seja imutaveis 
 
@@ -246,6 +261,18 @@ a = [1, 3, 4, 7]
 b = a				# B is being linked to A, acting as reference, so the changes in B will affect A
 c = a[:]			# C is inheriting all values in A, so C is just a copie of A
 	
+## Composed Lists
+person = ['john', 19]		
+people = []
+people.append(person[:])		#append a copy of person inside people, people become: [['john', 19]]
+person[0] = 'mary'				#change the value of person index 0
+person[1] = 60					#change the value of person index 1
+people.append(person[:])		#append a copy of person inside people, people become: [['john', 19], ['mary', 60]]
+....
+people = [['jj', 20], ['hh', 54], ['cj', 34]] 	#composed list can also be created like this
+
+print(people[0])    $['jj', 20] #print the list of index 0 inside the list people
+print(people[0][0]) $jj 		#print the item of index 0 in list of index 0
 ------------------------------ Libraries -------------------------------------
 * import libName   						# import the full library
 * from libName import funcName			# import only a function from a library
