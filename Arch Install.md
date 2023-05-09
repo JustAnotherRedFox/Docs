@@ -31,7 +31,7 @@
     * create /home directory
 * > mount /dev/sda4 /mnt/home
     * mount /home partition in /home directory
-* > pacman -S vim
+* > pacman -Sy vim
     * to install the text editor vim
 * > vim /etc/pacman.conf
     * edit the pacman.conf file to enable multilib repository(used to run 32-bits software and libraries)
@@ -81,7 +81,7 @@
     * install grub
 * > grub-mkconfig -o /boot/grub/grub.cfg
     * generate grub configuration file
-* > pacman -S dialog htop networkmanager network-manager-applet mesa mtools sudo
+* > pacman -S dialog networkmanager network-manager-applet mesa mtools sudo
     * recommended packages
 * > systemctl enable NetworkManager
     * enable service network manager
@@ -100,92 +100,25 @@
 
 * login with the user account a.k.a redfox
 
-* > sudo pacman -S $GD
+> sudo pacman -S $GD
     * to install the corresponding graphic drivers
     * $GD = xf86-video-intel, to intel graphics
     * $GD = xf86-video-amdgpu, to amd graphics
     * $GD = nvidia nvidia-utils nvidia-setting, to nvidia graphics
     * $GD = xf86-video-ati, to ati graphics
-* > sudo systemctl enable fstrim.timer
-    * if using ssd is recommended TRIM for better performance
-## Arch Base Dualboot
-* > timedatectl set-ntp true
-* > fdisk -l
-    * select 'sda' as device to formatation and use
-    * enter 'gpt' for UEFI systems
-    * Partitions:
-        * Swap    | 2GiB ~ 4GiB     | Linux Swap  | Opcional
-        * /       | 10GiB ~ 25GiB   | Linux Filesystem | generaly 1/4 of HDD
-        * /Home   | 40GiB ~ 250GiB  | Linux Filesystem | all space left in HDD
-    * White all changes and quit
-* > mkswap /dev/sda5
-* > swapon /dev/sda5
-* > mkfs.ext4 /dev/sda6
-    * make file system '/' in format ext4
-* > mkfs.ext4 /dev/sda7
-    * make file system '/home' in format ext4
-* > mount /dev/sda6 /mnt
-* > mkdir /mnt/home
-* > mount /dev/sda7 /mnt/home
-* > pacstrap /mnt base linux linux-firmware vim ntfs-3g base-devel
-* > mkdir /mnt/mnt/win
-* > mount /dev/sda4 /mnt/mnt/win
-    * mount windows primary partition(c:) in /mnt/mnt/win
-* > genfstab -U /mnt >> /mmnt/etc/fstab
-* > arch-chroot /mnt
-* > ln -sf /usr/share/zoneinfo/America/Bahia /etc/localtime
-* > hwclock --systohc --utc
-* > vim /etc/locale.gen
-    * uncomment line: pt_BR.UTF-8 UTF-8
-* > locale-gen
-* > echo "LANG=pt_BR.UTF-8" > /etc/locale.conf
-* > echo "redfox" >> /etc/hostname
-* > vim /etc/hosts
-    * add the following lines:
-        * 127.0.0.1 localhost
-        * ::1   localhost
-        * 127.0.1.1 redfox.localdomain  redfox
-    * use tab after every block
-* > mkinitcpio -p
-* > passwd
-    * root password
-* > pacman -S grub efibootmgr dosfstools os-prober mtools networkmanager
-* > mkdir /boot/EFI
-* > mount /dev/sda2 /boot/EFI
-	* mount the EFI system
-* > grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
-* > grub-mkconfig -o /boot/grub/grub.cfg
-
-* if windows is not located, type:
-	> echo "GRUB_DISABLE_OS_PROBER=false" >> /boot/grub/grub.cfg
-    > grub-mkconfig -o /boot/grub/grub.cfg
-* > systemctl enable NetworkManager
-* > useradd -m  wheel redfox
-* > passwd redfox
-    * user password
-* > pacman -S sudo 
-* > echo "redfox ALL=(ALL) ALL" >> /etc/sudoers
-* > exit
-    * exit the system
-* > umount -R /mnt
-    * Unmount the /mnt
-* > reboot
-    * reboot to new system
-
-* login with the user account a.k.a redfox
-
-* > sudo pacman -S $GD
-    * to install the corresponding graphic drivers
-    * $GD = xf86-video-intel, to intel graphics
-    * $GD = xf86-video-amdgpu, to amd graphics
-    * $GD = nvidia nvidia-utils nvidia-setting, to nvidia graphics
-    * $GD = xf86-video-ati, to ati graphics
-* > sudo systemctl enable fstrim.timer
+> sudo systemctl enable fstrim.timer
     * if using ssd is recommended TRIM for better performance
 
 # Arch Personalization
 ## Environment 
 * I3
+	> sudo pacman -Syu
+		* update system to lastest packages
+		
+	> sudo pacman -S xorg-server xorg-xinit i3-wm --needed
+		* install i3-wm (wich contain i3-gaps and a display manager)
+		* install xorg 
+		* install all dependences
 * Gnome
     * > pacman -S gdm
     * > systemctl enable gdm
@@ -195,7 +128,91 @@
     * > pacman -S plasma konsole dolplin
 * xfce
     * > pacman -S xfce4 xfce4-goodies xfce4-terminal
+	
 * login manager
     * > pacman -S slim xorg-server
     * > systemctl enable slim
-## Applications
+## Customization and Apps
+> sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-font-awesome -needed
+	* install optional but recommended fonts
+		
+> sudo pacman -S alsa-utils alsa-plugins alsa-lib pavucontrol -needed
+	* install sound drivers and tools
+	
+> sudo pacman -S dmenu w3m alacritty git neofetch htop wget polybar feh xclip neovim --needed
+	* install additional tools:
+		* browser: palemoon
+		* status bar: polybar, to replace i3-bar
+		* System Monitor: htop
+		* wallpaper: feh
+		* apps menu: dmenu
+		* terminal emu.: alacritty
+		* clipboard manager: xclip
+		* text editor: neovim
+		* terminal browser: w3m
+
+> sudo vim /etc/modprobe.d/alsa-base.conf
+	* write the following
+	* options snd_mia index=0
+	* options snd_hda_intel index=1
+
+> reboot
+	* reboot the system
+	
+> cp /etc/X11/xinit/xinitrc ~/.xinitrc
+	* copy the template xinit to home
+	
+> vim ~/.xinitrc
+	* remove everything below '#start some nice programs'
+	
+> echo "exec i3" >> ~/.xinitrc
+	* will write exec i3 on the .init file
+	* to execute i3 every time the xsession is started
+	
+> w3m https://www.palemoon.org/download.shtml
+	* access palemoon site and download palemoon gtk3 install
+> sudo tar -xvf palemoon.tar.xz -C /opt/
+	* extract the downloaded archive and move to /opt/
+> sudo -sf /opt/palemoon/palemoon /usr/bin/palemoon
+	* create a simbolic link in usr/bin from the executable
+	
+> startx
+	* to start the X window session
+	
+## Installing SDL2
+> sudo pacman -S sdl2 sdl2_mixer sdl2_image sdl2_ttf
+
+## Customizing I3
+* i3 config
+set $mod mod4 (windows key)
+
+* start a terminal
+bindsym $mod+Return exec alacritty
+
+* kill focused windows
+bindsym $mod+q kill
+
+* change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+* move focused windows
+* change focus
+bindsym $mod+Shift+h focus left
+bindsym $mod+Shift+j focus down
+bindsym $mod+Shift+k focus up
+bindsym $mod+Shift+l focus right
+
+* comment lines:
+	* bindsym $mod+h split h
+	* bindsym $mod+v split v
+- navegation keys = $mod + h, j, k, l
+- 
+
+## wallpaper
+> mkdir ~/Images/wallpapers
+	* rename you wallpaper image as linux_wallpaper.jpg and put it on ~/Images/wallpapers
+> feh --bg-scale ~/Images/wallpapers/linux_wallpaper.jpg
+> echo "exec $HOME/.fehbg" >> ~/.xinitrc
