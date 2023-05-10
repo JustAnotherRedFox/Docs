@@ -133,13 +133,13 @@
     * > pacman -S slim xorg-server
     * > systemctl enable slim
 ## Customization and Apps
-> sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-font-awesome -needed
+> sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-fira-code ttf-font-awesome -needed
 	* install optional but recommended fonts
 		
 > sudo pacman -S alsa-utils alsa-plugins alsa-lib pavucontrol -needed
 	* install sound drivers and tools
 	
-> sudo pacman -S dmenu w3m alacritty git neofetch htop wget polybar feh xclip neovim --needed
+> sudo pacman -S dmenu w3m alacritty picom git neofetch htop wget polybar feh xclip neovim --needed
 	* install additional tools:
 		* browser: palemoon
 		* status bar: polybar, to replace i3-bar
@@ -150,6 +150,7 @@
 		* clipboard manager: xclip
 		* text editor: neovim
 		* terminal browser: w3m
+		* compositor: picom
 
 > sudo vim /etc/modprobe.d/alsa-base.conf
 	* write the following
@@ -178,7 +179,22 @@
 	
 > startx
 	* to start the X window session
+
+## wallpaper
+> mkdir ~/Images/wallpapers
+	* rename you wallpaper image as linux_wallpaper.jpg and put it on ~/Images/wallpapers
+> feh --bg-scale ~/Images/wallpapers/linux_wallpaper.jpg
+
+## polybar
 	
+> mkdir ~/.config/polybar
+> cp /etc/polybar/config.ini ~/.config/polybar/config.ini
+
+> vim ~/.config/polybar/config.ini
+	* comment the [module/wlan] section
+*[module/pulseaudio]
+*type = internal/alsa
+
 ## Installing SDL2
 > sudo pacman -S sdl2 sdl2_mixer sdl2_image sdl2_ttf
 
@@ -208,11 +224,41 @@ bindsym $mod+Shift+l focus right
 * comment lines:
 	* bindsym $mod+h split h
 	* bindsym $mod+v split v
-- navegation keys = $mod + h, j, k, l
-- 
+	
+	* bar {
+	*		status_command i3bar
+	* }
 
-## wallpaper
-> mkdir ~/Images/wallpapers
-	* rename you wallpaper image as linux_wallpaper.jpg and put it on ~/Images/wallpapers
-> feh --bg-scale ~/Images/wallpapers/linux_wallpaper.jpg
-> echo "exec $HOME/.fehbg" >> ~/.xinitrc
+*# focus follows mouse yes|no 
+focus_follows_mouse no
+
+*# workspace auto back and forth yes|no 
+workspace_auto_back_and_forth yes
+
+*# i3 inner gaps
+gaps inner 5
+
+*# i3 outer gaps, e.g gaps outer|horizontal|vertical|top|left|bottom|right <gap_size>[px]
+gaps top -10
+gaps horizontal 2
+
+*# i3 workspace specific gaps
+workspace 2 gaps inner 2
+workspace 2 gaps outer 0
+workspace 2 gaps top -10
+
+*# auto exec programs
+exec_always --no-startup-id feh --bg-sscale ~/Images/wallpapers/linux_wallpaper.jpg
+exec_always --no-startup-id killall -q polybar
+exec_always --no-startup.id polybar meineBar
+exec --no-startup-id picom -f --xrender -fence
+
+## alacritty
+> mkdir ~/.config/alacritty/alacritty.yml
+> vim ~/.config/alacritty/alacritty.yml
+
+## dotfile
+all dot files must be pulled from git is easier
+
+## zsh Terminal
+* Go inside the oh my zsh site and copy the curl link the put on terminal

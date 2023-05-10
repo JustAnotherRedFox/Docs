@@ -145,12 +145,22 @@ nomeclatura dos diretorios:
     * remove todas as dependecias nao nescessarias
 
 --- arch based ---
-pacman -S item_name
+pacman -S <pkg>
     * instala os programas listados
     
+pacman -Rsc <pkg>	
+	* unstall the pakeges and it's unneeded dependencies
+	
+pacman -Qdt
+	* list unneeded packages
+
+pacman -Rns $(pacman -Qdtq)
+	* remove unneeded packages
+	
 pacman -Gs search_term
+pacman -Ss search_term
     * pesquisa o termo listado
-    
+
 pacman -Syu
     * atualiza o sistema e os programas nele
 
