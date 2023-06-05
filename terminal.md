@@ -7,6 +7,10 @@ wildcards:
   > [] = usado para selecionar intervalos, ex.: [a-z, A-z, 0-9] seleciona todos os arquivos nestes intervalos de letras
   > {} = usado para selecionar padroes, ex.: {hr, conf, jp} ira selecionar todos os arquivos que possuem estes padroes especificos
 
+arg for applications:
+	> -b
+		* e.g picom -b 
+		* allowed a application to run as daemon, then the shell will not freese nor will the app stop when the terminal is closed
 permicoes:
   > chmod +x nome_do_arquivo
 	* da permicao de execucao(execute) a um arquivo
@@ -158,67 +162,8 @@ pacman -Rns $(pacman -Qdtq)
 	* remove unneeded packages
 	
 pacman -Gs search_term
-pacman -Ss search_term
+pacman -Ss <pkg>
     * pesquisa o termo listado
 
 pacman -Syu
     * atualiza o sistema e os programas nele
-
-
--------------------------- vim ------------------------
-normal mode: ESC
-insert mode: i, I, a, A, o, O
-visual mode: v
-  CMD  mode: :
-
-movimentation(normal mode) :
-h: left
-j: down
-k: up
-l: right
-
-G: end of the file
-gg: top of the file
-e: end of the word
-w: start of the next word
-0: start of the line
-$: end of the line
-}: end of the paragraph
-%: end of brackets, square brackets, curly brackets
-
-insertion movimentation:
-
-I: insertion in start of the line
-a: insertion one letter in front of the cursor
-A: insertion in the end of the line
-o: insertion and create one line below
-O: insertion and create one line above
-
-x: delete the letten selected
-X: delete the letter behide
-dd: delete the whole line
-
-y: copy
-p: paste
-yy: copy a whole line
-x,dd...: can be use as cut command
-
-u: undo the last modification
-U: undo a whole line of modifications
-ctrl + R: redo the undo
-
-search:
-in normal mode  /search_item
-ex.: /delete
-	* will search by delete
-	* use n to next
-	* use N to previous
-
-:q  - quit without save
-:q! - force quit without save
-:w  - save 
-:wq - write and quit
-
-:w new_name - to save with a new name
-
-
