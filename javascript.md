@@ -195,41 +195,6 @@ n--           - ira subtrair 1 a variavel 'n'
 > var media = 5.5
 > media > 7?'aprovado' :'reprovado'
 <- 'reprovado'
-
-------------------------------------------------- DOM -------------------------------------------
-
-DOM           - Document Object Model
-
---------- DOM Tree -------------
-
-                                      window
-                            ↓            ↓           ↓ 
-                        location      document     history
-                                         ↓ 
-                                       html
-                                     ↓      ↓
-                                   head    body
-                                ↓    ↓       ↓   ↓   ↓    
-                              meta title    h1   p  div
-                                                 ↓ 
-                                              strong
------- selecionacao de elemento DOM --------------
-
------ by Tag ---------
-getElementsByTagName()
------ by ID ----------
-getElementByid()
------ by Name --------
-gtElementsByName()
------ by Class -------
-getElementByClassName()
------ by selector ----
-querySelector()
-querySelectorAll()
----------- ex.: ------
-window.document.getElementByid('titulo');
-var d = widow.document.querySelector('div#id_qualquer');
-
 ------------------ function ---------------------
 
 sao blocos de codigo que serao executadas apenas por eventos
@@ -275,7 +240,15 @@ while (condition()) {     do {                      for (start;text;incr) {
     code block                code block                 clode block
 }                         } while (condition())     }
 
---------------------------------------------- array ---------------------------------------------
+------------ run through array ---------------
+* to run through every element of an Array
+
+let word = "john Santos";
+
+for (const letter of word) {
+	console.log(letter);
+}
+--------------------------------------------- array or 'lista' ---------------------------------------------
 
 um array/variavel composta e uma variavel que tem varios elementos, cada elemento composto por um valor e por uma chave de identificacao
 
@@ -321,6 +294,41 @@ function action(param) {
 }
 
 action(5)
+
+------------------------------------------------- DOM -------------------------------------------
+
+DOM           - Document Object Model
+
+--------- DOM Tree -------------
+
+                                      window
+                            ↓            ↓           ↓ 
+                        location      document     history
+                                         ↓ 
+                                       html
+                                     ↓      ↓
+                                   head    body
+                                ↓    ↓       ↓   ↓   ↓    
+                              meta title    h1   p  div
+                                                 ↓ 
+                                              strong
+------ selecionacao de elemento DOM --------------
+
+----- by Tag ---------
+getElementsByTagName()
+----- by ID ----------
+getElementByid()
+----- by Name --------
+gtElementsByName()
+----- by Class -------
+getElementByClassName()
+----- by selector ----
+querySelector()
+querySelectorAll()
+---------- ex.: ------
+window.document.getElementByid('titulo');
+var d = widow.document.querySelector('div#id_qualquer');
+
 
 ---------------------------------------- throw and try/catch -----------------------------------
 

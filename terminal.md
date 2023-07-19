@@ -167,3 +167,9 @@ pacman -Ss <pkg>
 
 pacman -Syu
     * atualiza o sistema e os programas nele
+
+---------- CMAKE -----------
+> mkdir build && cd build
+> cmake ../
+> cd ../
+> make -C build

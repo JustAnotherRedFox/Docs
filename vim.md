@@ -1,3 +1,53 @@
+-------------- NVIM -------------
+# LazyVim
+| KEY |   | Description |			 | Mode |
+
+> Modes	
+	> n = normal Mode
+		> ff = exit to n mode  			= i
+	> i = insert Mode
+		> i = insert on letter 			= n
+		> o = insert 1 line below 		= n
+		> O = insert 1 line above 		= n
+		> A = insert on end of line 	= n 
+	> v = visual Mode
+> Keys
+	> # = key placeholder
+	> S- = Shift + #
+	> C- = Ctrl + #
+	> <L> = Leader Key + #
+	
+# [Movement Keys]
+* h	= left  							= n 
+* j	= up  								= n 
+* k = down  							= n 
+* l	= right 							= n 
+
+# [Movement inside File]
+* G = end of the file					= n
+* gg = top of the file					= n
+* e = end of the word					= n
+* w = start of the next word			= n
+* 0 = start of the line					= n
+* $ = end of the line					= n
+* } = end of the paragraph				= n
+* % = end of brackets					= n
+
+# [Movement Windows]
+* C-h	= left window 					= n  
+* C-j	= lower window  				= n 
+* C-K	= upper window  				= n 
+* C-l	= right window  				= n 
+* <L>-  = split window below    		= n 
+* <L>|  = split window right 			= n
+
+# [Movement Buffer(aka. tab)]
+* S-h   = prev buffer(tab) 				= n 
+* S-l 	= next buffer(tab) 				= n 
+
+# [Surrounding]
+* gza  = creating a surrounding  		= v
+	* e.g surround a word with '{}'
 -------------------------- vim ------------------------
 normal mode: ESC, jj
 insert mode: i, I, a, A, o, O
@@ -6,20 +56,8 @@ visual mode: v
 # comment
 * gcc  		'comment/uncomment a line'
 * gc 		'comment/uncomment a selection(in V mode)'
-movimentation(normal mode) :
-h: left
-j: down
-k: up
-l: right
 
-G: end of the file
-gg: top of the file
-e: end of the word
-w: start of the next word
-0: start of the line
-$: end of the line
-}: end of the paragraph
-%: end of brackets, square brackets, curly brackets
+
 
 insertion movimentation:
 
