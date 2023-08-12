@@ -11,6 +11,15 @@ arg for applications:
 	> -b
 		* e.g picom -b 
 		* allowed a application to run as daemon, then the shell will not freese nor will the app stop when the terminal is closed
+
+* Archives:
+	* unzip path_to_archive
+		* to unzip '.zip' files
+	* 7z x path_to_archive
+		* to unzip '.7z' files
+	* tar -xvzf path_to_archive
+		* to unzip '.tar.xz' files 
+		
 permicoes:
   > chmod +x nome_do_arquivo
 	* da permicao de execucao(execute) a um arquivo
@@ -18,6 +27,8 @@ permicoes:
         * da permicao de escrita(write) a um arquivo
   > chmod +r nome_do_arquivo
         * da permicao de leitura(read) a um arquivo
+  > chown user_name file_name
+		* change ownership of file
 
 alterar terminal:
   > update-alternatives --config x-terminal-emulator

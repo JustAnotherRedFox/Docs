@@ -31,9 +31,9 @@
     * create /home directory
 * > mount /dev/sda4 /mnt/home
     * mount /home partition in /home directory
-* > pacman -Sy vim
-    * to install the text editor vim
-* > vim /etc/pacman.conf
+* > pacman -Sy neovim git
+    * to install the text editor neovim
+* > nvim /etc/pacman.conf
     * edit the pacman.conf file to enable multilib repository(used to run 32-bits software and libraries)
     * Uncomment the following lines:
         * [multilib]
@@ -54,7 +54,7 @@
     * set hardware clock
 * > date
     * check time
-* > vim /etc/locale.gen
+* > nvim /etc/locale.gen
     * uncomment the following line:
         * en_US.UTF-8 UTF-8
 * > locale-gen
@@ -63,7 +63,7 @@
     * add locale to /etc file
 * > echo "redfox" > /etc/hostname
     * create hostname 'redfox'
-* > vim /etc/hosts
+* > nvim /etc/hosts
     * add the following lines:
         * 127.0.0.1 localhost
         * ::1   localhost
@@ -139,7 +139,7 @@
 > sudo pacman -S alsa-utils alsa-plugins alsa-lib pavucontrol -needed
 	* install sound drivers and tools
 	
-> sudo pacman -S dmenu w3m alacritty picom git neofetch htop wget polybar feh xclip neovim --needed
+> sudo pacman -S dmenu w3m alacritty picom git neofetch htop wget polybar feh xclip neovim p7zip --needed
 	* install additional tools:
 		* browser: palemoon
 		* status bar: polybar, to replace i3-bar
@@ -163,7 +163,7 @@
 > cp /etc/X11/xinit/xinitrc ~/.xinitrc
 	* copy the template xinit to home
 	
-> vim ~/.xinitrc
+> nvim ~/.xinitrc
 	* remove everything below '#start some nice programs'
 	
 > echo "exec i3" >> ~/.xinitrc

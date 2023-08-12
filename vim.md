@@ -32,6 +32,7 @@
 * $ = end of the line					= n
 * } = end of the paragraph				= n
 * % = end of brackets					= n
+* zz = centralize verticaly				= n
 
 # [Movement Windows]
 * C-h	= left window 					= n  

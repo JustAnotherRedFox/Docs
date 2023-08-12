@@ -1,6 +1,41 @@
 # BLender Shortcuts
 > blender v.3.3
 
+## Movement
+* Rotate
+	* alt + LMB
+* Pan
+	* Shift + alt + LMB
+## Folders
+* Move to Collections/NewCollection
+	* m
+	
+## Mesh
+* Add Menu
+	* shift + a 
+* Duplicate
+	* shift + d 
+* separate menu (Edit Mode Only)
+	* p
+* linking menu (Object Mode)
+	* > To link materials, attributes, etc.
+	* Ctrl + l
+	
+## view
+* toggle x-ray
+	* alt + z
+* toggle focus (hide everything but)
+	* /
+* toggle focus (zoom and center on)
+	* .
+* Shift Mesh Focus (Sculpt Mode, Edit Mode, etc)
+	* alt + q
+
+## Sculpting
+* Voxel Size (Sculpt Mode)
+	* Shift + r 
+* Remesh (Sculpt Mode)
+	* Ctrl + r 
 * Grab (G)
 	* Grab in $axis e.g (G + X)
 	* Grab only in $axis e.g (G + shift + Y)
