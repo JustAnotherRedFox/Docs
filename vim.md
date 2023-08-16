@@ -22,6 +22,10 @@
 * j	= up  								= n 
 * k = down  							= n 
 * l	= right 							= n 
+* w = next word 						= n 
+* b = next word 						= n
+* W = prev big word
+* B = prev big word
 
 # [Movement inside File]
 * G = end of the file					= n
@@ -33,6 +37,7 @@
 * } = end of the paragraph				= n
 * % = end of brackets					= n
 * zz = centralize verticaly				= n
+* * = search for word under cursor 		= n
 
 # [Movement Windows]
 * C-h	= left window 					= n  
@@ -49,6 +54,15 @@
 # [Surrounding]
 * gza  = creating a surrounding  		= v
 	* e.g surround a word with '{}'
+
+# [Changing Text]
+* cw	= change the word from the cursor to the end of word
+* ci( 	= change text inside current brackets 
+* ci{   = change text inside current curly braces
+* ci'	= change text inside current ' quotes
+* ci"	= change text inside current " quotes
+* r<char> = Replaces character under cursor
+
 -------------------------- vim ------------------------
 normal mode: ESC, jj
 insert mode: i, I, a, A, o, O
