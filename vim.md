@@ -11,6 +11,10 @@
 		> O = insert 1 line above 		= n
 		> A = insert on end of line 	= n 
 	> v = visual Mode
+	> v-b = Visual Block mode 
+		> ctrl + v = enter visual block mode 
+			> I = to insert text on all highlighted column
+			> Esc + Esc = to apply 
 > Keys
 	> # = key placeholder
 	> S- = Shift + #
@@ -26,12 +30,12 @@
 * b = next word 						= n
 * W = prev big word
 * B = prev big word
+* :# = Go to # Line						= n
 
 # [Movement inside File]
 * G = end of the file					= n
 * gg = top of the file					= n
 * e = end of the word					= n
-* w = start of the next word			= n
 * 0 = start of the line					= n
 * $ = end of the line					= n
 * } = end of the paragraph				= n
