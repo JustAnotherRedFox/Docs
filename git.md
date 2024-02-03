@@ -1,17 +1,5 @@
 # GIT 
-                                   
-* working directory
-	> onde fica todos os arquivos
-	> working tree
-* stage area
-	> preparacao dos arquivos, para o commit
-	> index
-	> stage tree
-* repository[local]
-	> banco de dados dos arquivos
-	> onde ficaram os pontos na historia ou historico
-
-## criando um novo repositorio
+## Creating Repository
 
 * $git init
 	> cria ou reinicia um repositorio git
@@ -21,8 +9,12 @@
 	> adiciona um arquivo especifico(in this case 'archive.txt) a stage area
 * $git commit -m "Title" -m "Message"                               
 	> prepara todos os arquivos da fila para serem enviados
-* $git branch -M main                                     
-	> Cria a branch principal chamada main
+
+* $git branch -M <new name>                                     
+	> rename the Main/Master branch
+* $git checkout -b <branch name>
+	> Create and switch to a new branch
+ 
 * $git remote add origin <link.git>                       
 	> cria uma conecção com o repositorio remoto
 * $git push -u origin main                                
@@ -34,6 +26,7 @@
 * $clear                                                  
 	> limpa o terminal
 
+## Setting Up Remote
 * $git remote set-url                                     
 	> muda a URL de um remote ja existente, pode mudar de https para ssh ou vice-versa
 * $git remote -v                                          
@@ -47,7 +40,7 @@
 * $git config --global user.email 'user_email'            
 	> configura o email do usuario
 
- 
+## Generating SSH Key
 * $ssh-keygen -t ed25519 -C "your_email@example.com"      
 	> gera uma nova ssh key
 * Enter a file in which to save the key (/home/you/.ssh/id_ed25519): [Press enter]
@@ -59,6 +52,7 @@
 * $ssh-add ~/.ssh/id_ed25519                              
 	> adiciona a ssh key ao ssh agent
 
+## Logs and COmmit History
 * $git log                                                
 	> mostra o log de commits
 * $git log --oneline                                      
